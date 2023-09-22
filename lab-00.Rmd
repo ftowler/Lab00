@@ -17,17 +17,20 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Peter Rabbit", "Fergus Towler", "Dimitri", 
+           "Harvey", "Eric"),
+  github_username = c("mcgregors-garden", "ftowler", "dimir24", 
+                      "Capyharav", "HZEric1"), 
+  colour = c("powderblue", "purple", "blue", 
+             "blue", "red"),
+  hobby = c("Hopping", "Tennis", "football", 
+            "Drinking", "Warhammer40k"),
+  favourite_number = c(2,2, 6, 7, 3)
   )
 
+team_data
+```
+```{r}
 team_data
 ```
 
@@ -47,19 +50,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+Github usernames plotted against favourite number with their favourite colour as the bars colour.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Github Usernames", 
+          y = "Favourite Username",
+          title = "Team Info Graph")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+Allows you to change a plots labels
 
 ### Exercise 20
 
@@ -69,4 +72,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+The data would be better displayed as a pi chart as it would show the large variance of hobbies while also showing more popular ones without needing a really long chart
